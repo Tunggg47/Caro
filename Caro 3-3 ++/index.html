@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Caro 3x3</title>
+    <link rel="icon" href="images/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/script.js"></script>
+</head>
+
+<body>
+<!--begin heading-->
+<div class="heading">
+    <h1 id="title">Game Caro 3x3</h1>
+    <div class="turn">
+        <h2 id="turn">Player 1 turn </h2>
+        <img id="turn-img" src="/images/red.png">
+    </div>
+    <div class="score">
+        <h4 id="plr1">Player 1: 0</h4>
+        <h3 class="scr">Score</h3>
+        <h4 id="plr2">Player 2: 0</h4>
+    </div>
+</div>
+<!--end heading-->
+<!--begin popup-->
+<div id="outpopup">
+    <div class="popup">
+        <p id="message"></p>
+        <button id="ok" onclick="closepopup()" >Ok</button>
+    </div>
+</div>
+<!--end popup-->
+<!--Begin broard-->  
+<table class="board">
+    <tr class="row">
+        <td class="A">
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="0"><img class="chess" id="chess0" src=""></button>
+        </td>
+        <td class="A">                 
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="1"><img class="chess" id="chess1" src=""></button>
+        </td>
+        <td class="A">                  
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="2"><img class="chess" id="chess2" src=""></button>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="A">                  
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="3"><img class="chess" id="chess3" src=""></button>
+        </td>
+        <td class="A">                
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="4"><img class="chess" id="chess4" src=""></button>
+        </td>
+        <td class="A">                 
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="5"><img class="chess" id="chess5" src=""></button>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="A">                  
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="6"><img class="chess" id="chess6" src=""></button>
+        </td>
+        <td class="A">                 
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="7"><img class="chess" id="chess7" src=""></button>                  
+        </td>
+        <td class="A">
+            <button onmouseenter="hover(this.id)" onmouseleave="leave(this.id)" onclick= "choose(this.id)" class="chessbox" id="8"><img class="chess" id="chess8" src=""></button>
+        </td>
+    </tr>
+</table>
+<!--end broard-->
+<!--begin footer-->
+<div class="footer">
+    <div class="out-time">
+        <h4 id="time">Time: </h4>
+        <p id="second">0</p>
+        <p>s</p>
+    </div>
+    <div class="out-St">
+        <p class="St">Set time:</p>
+        <input id="Stime" type="text" value="">
+        <p class="St">Second</p>
+    </div>
+    <button id="back" class="option" onclick="back()" >Back</button>
+    <button id="playAg" class="option"  onclick="Playagain()">Play Again</button>
+    <audio id="turn-audio"><source type="audio/mpeg" src="/audio/turn-sound.mp3" ></audio>
+    <audio id="win-audio"><source type="audio/mpeg" src="/audio/win-sound.mp3" ></audio>
+    <audio id="time-audio"><source type="audio/mpeg" src="/audio/time-sound.mp3" ></audio>
+    <audio id="Ftime-audio"><source type="audio/mpeg" src="/audio/full-time-sound.mp3" ></audio>
+</div>
+<!--end footer-->
+</body>
+</html>
